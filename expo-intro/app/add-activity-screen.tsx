@@ -6,7 +6,7 @@ export default function addActivityScreen() {
     <View>
       <Text>AddActivityScreen</Text>
       <Link style={styles.button} href={"/"} replace>
-        <Text style={styles.buttonText}>Click Me</Text>
+        <Text style={styles.buttonText}>Go Back</Text>
       </Link>
     </View>
   )
