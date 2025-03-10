@@ -4,9 +4,9 @@ import { Asset } from "expo-asset";
 import React, { Suspense, useEffect, useState } from "react";
 import { View } from "react-native";
 
-interface DatabaseProviderProps {
-    children: React.ReactNode;
-  }
+//interface DatabaseProviderProps {
+//    children: React.ReactNode;
+//}
 
 async function loadDatabase() {
     const name = "activities.db";
@@ -37,7 +37,7 @@ function useDb() {
     return { loaded };
 }
 
-function DatabaseProvider({ children }: DatabaseProviderProps) {
+export function DatabaseProvider({ children }: {children: React.ReactNode}) {
     const { loaded } = useDb();
 
     if (!loaded) {

@@ -8,6 +8,10 @@ export const styles = StyleSheet.create({
         alignItems: "center",
       },
 
+    heading: {
+        fontSize: 24,
+      },
+
     button:{
         backgroundColor:"#1ed2af",
         padding: 16,

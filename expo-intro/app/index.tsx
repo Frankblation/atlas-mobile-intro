@@ -1,13 +1,19 @@
 import { Alert, Pressable, Text, View } from "react-native";
 import { styles } from "@/lib/Constants";
 import { Link, router } from "expo-router";
+import DatabaseProvider from "@/compnents/DatabaseProvider";
+import { useActivities } from "@/compnents/useActivities";
 export default function Index() {
+
+  const {activities} = useActivities();
   return (
+    <DatabaseProvider>
     <View style={styles.container}>
-       <Text>Edit app/index.tsx to edit this screen.</Text>
+       <Text style={styles.heading}>{JSON.stringify(activities)}.</Text>
        <Link style={styles.button} href={'/add-activity-screen'}>
       <Text style={styles.buttonText}>Add Activity</Text>
       </Link>
     </View>
+    </DatabaseProvider>
   );
 }
